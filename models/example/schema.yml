@@ -7,6 +7,12 @@ models:
       columns:
           - name: id
             description: "The primary key for this table"
+<<<<<<< HEAD
+           
+                
+                
+=======
+>>>>>>> b1499696e3357d66a7916d3a10812be29ef7586d
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
