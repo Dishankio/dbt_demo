@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: SNOWFLAKE_SAMPLE_DATA
+  - name: SNOWFLAKE_SAMPLE_DATA_source
     database: SNOWFLAKE_SAMPLE_DATA  
     schema: TPCDS_SF10TCL
     description: "sample data" 
