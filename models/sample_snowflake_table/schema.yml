@@ -2,10 +2,10 @@ version: 2
 
 models:
   - name: sample_snowflake_table__sample
-    database: SNOWFLAKE_SAMPLE_DATA  
-    schema: TPCDS_SF10TCL
+    database: DEMODB_1  
+    schema: PUBLIC
     description: "sample data" 
     tables:
-      - name: store_sales
+      - name: new
         description: "about table"
 
