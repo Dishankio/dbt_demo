@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: sample_snowflake_table__sample
+    database: SNOWFLAKE_SAMPLE_DATA  
+    schema: TPCDS_SF10TCL
+    description: "sample data" 
+    tables:
+      - name: store_sales
+        description: "about table"
+
