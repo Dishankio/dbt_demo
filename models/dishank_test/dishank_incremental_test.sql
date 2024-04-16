@@ -1,4 +1,4 @@
-{{config(materialized = "table")}}
+{{config(materialized = "incremental")}}
 
 with source_store_sales as (
     select * from {{source('DISHANK_SOURCE','DISHANK_SOURCE')}}
@@ -9,3 +9,7 @@ final as (
 )
 
 select * from final
+
+{% if is_incremental() %}
+where event_time >= (select max(TIMESTAMP) from {{ this }})
+{% endif %}
