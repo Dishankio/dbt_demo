@@ -11,5 +11,5 @@ final as (
 select * from final
 
 {% if is_incremental() %}
-where event_time >= (select max(TIMESTAMP) from {{ this }})
+where TIMESTAMP >= (select max(TIMESTAMP) from {{ this }})
 {% endif %}
