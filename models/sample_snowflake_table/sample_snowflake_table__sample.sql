@@ -8,4 +8,4 @@ final as (
     select TOP 3 * from source_store_sales
 )
 
-select * from final
+select *,CURRENT_TIMESTAMP() as "DISHAnK_TIMESTAMP" from final
