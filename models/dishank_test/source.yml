@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: DISHANK
+    database: DISHANK_SOURCE 
+    schema: PUBLIC
+    description: "sample data" 
+    tables:
+      - name: DISHANK_SOURCE
+        description: "about table"
+
