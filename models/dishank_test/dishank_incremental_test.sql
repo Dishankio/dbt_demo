@@ -1,7 +1,7 @@
 {{config(materialized = "table")}}
 
 with source_store_sales as (
-    select * from {{source('SNOWFLAKE_SAMPLE_DATA_source','store_sales')}}
+    select * from {{source('DISHANK_SOURCE','DISHANK_SOURCE')}}
 ),
 
 final as (

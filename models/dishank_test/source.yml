@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: DISHANK
+  - name: DISHANK_SOURCE
     database: DISHANK_SOURCE 
     schema: PUBLIC
     description: "sample data" 
