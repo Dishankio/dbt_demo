@@ -1,11 +1,9 @@
-{{config(materialized = "ephemeral")}}
-
-with source_store_sales as (
-    select * from {{source('SNOWFLAKE_SAMPLE_DATA_source','store_sales')}}
-),
-
-final as (
-    select TOP 3 * from source_store_sales
-)
-
-select * from final
+select 
+    S.ID,
+    C.CURRENT_TIMESTAMP
+from 
+    {{ ref("dishank_incremental_test")}} S
+JOIN 
+    {{ ref("sample_snowflake_table__sample")}} C ON S.ID = C.ID
+GROUP BY 
+    S.ID
