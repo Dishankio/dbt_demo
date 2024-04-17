@@ -1,7 +1,7 @@
 {{ config(
     materialized="dynamic_table",
     on_configuration_change="apply",
-    target_lag="10 seconds",
+    target_lag="100 seconds",
     snowflake_warehouse="COMPUTE_WH",
 ) }}
 
