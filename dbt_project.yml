@@ -36,9 +36,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
+  dbt_demo:
     # Applies to all files under models/example/
     example:
       +materialized: table
+      +tags : "all"
+      my_first_dbt_model:
+        +tags:
+          -"test_tag"
     sample_snowflake_table :
       +materialized: table
+    dishank_test:
+      dishank_incremental_test:
+        +tags:
+          -"test_tag"
