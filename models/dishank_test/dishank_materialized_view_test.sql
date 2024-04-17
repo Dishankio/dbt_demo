@@ -10,7 +10,7 @@ with source_store_sales as (
 ),
 
 final as (
-    select TOP 6 * from source_store_sales
+    select * from source_store_sales
 )
 
 select * from final
