@@ -41,11 +41,9 @@ models:
     example:
       +materialized: table
       my_first_dbt_model:
-        +tags:
-          -"test_tag"
+        +tags: "test_tag"
     sample_snowflake_table :
       +materialized: table
     dishank_test:
       dishank_incremental_test:
-        +tags:
-          -"test_tag"
+        +tags: "test_tag"
