@@ -2,11 +2,11 @@
 
 {{
     config(
-      target_database='DISHANK_SOURCE',
+      target_database='DISHANK',
       target_schema='PUBLIC',
       unique_key='ID',
       strategy='TIMESTAMP',
-      updated_at='TIMESTAMP',
+      updated_at='ID',
     )
 }}
 
