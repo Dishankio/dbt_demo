@@ -4,9 +4,9 @@
     config(
       target_database='DISHANK',
       target_schema='PUBLIC',
-      unique_key='ID',
+      unique_key='INTEGER',
       strategy='TIMESTAMP',
-      updated_at='ID',
+      updated_at='updated_at',
     )
 }}
 
