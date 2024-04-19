@@ -1,4 +1,5 @@
-{{config(materialized = "incremental")}}
+{{config(materialized = "incremental",unique_key="ID")
+}}
 
 with source_store_sales as (
     select * from {{source('DISHANK_SOURCE','DISHANK_SOURCE')}}
