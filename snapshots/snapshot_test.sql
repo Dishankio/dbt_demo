@@ -5,7 +5,7 @@
       target_database='DISHANK',
       target_schema='PUBLIC',
       unique_key='INTEGER',
-      strategy='TIMESTAMP',
+      strategy='timestamp',
       updated_at='updated_at',
     )
 }}
