@@ -34,8 +34,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # instead be materialized as tables. Any models you add to the root of the models folder will 
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+# on-run-start: "INSERT INTO dishank_source.public.dishank_source (id, updated_at, integer, name, etc) VALUES (1003, CURRENT_TIMESTAMP, 60000, 'Dishank', 'Extra data')"
+
 
 models:
+  # pre-hook: "INSERT INTO dishank_source.public.dishank_source (id, updated_at, integer, name, etc) VALUES (1001, CURRENT_TIMESTAMP, 60000, 'Dishank', 'Extra data')"
   my_new_project:
     # Applies to all files under models/example/
     example:
@@ -47,3 +50,7 @@ models:
     dishank_test:
       dishank_incremental_test:
         +tags: "test_tag"
+pre-hooks:
+  - name: call_api_script
+    module_path: ./pre_hooks
+    sql: true

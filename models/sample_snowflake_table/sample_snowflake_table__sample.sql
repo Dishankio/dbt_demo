@@ -5,7 +5,7 @@ with source_store_sales as (
 ),
 
 final as (
-    select TOP 3 * from source_store_sales_test
+    select TOP 3 * from source_store_sales
 )
 
-select *,CURRENT_TIMESTAMP() as "DISHAnK_TIMESTAMP" final
+select *,CURRENT_TIMESTAMP() as "DISHAnK_TIMESTAMP" from final
